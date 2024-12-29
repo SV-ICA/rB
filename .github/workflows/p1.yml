@@ -3,14 +3,13 @@
 name: Pipeline p1.yml
 
 on:
-  workflow_call:
-  # push:
-  # workflow_dispatch:  # we can also run it manually
+  push:
+  workflow_dispatch:  # we can also run it manually
 
 
 jobs:
   j1:
     runs-on: ubuntu-latest
-    # uses: SV-ICA/rP/.github/workflows/p1.yml@main
-    uses: SV-ICA/rP/.github/workflows/p1.yml@tag1
+    uses: SV-ICA/rP/.github/workflows/p1.yml@main
+    # uses: SV-ICA/rP/.github/workflows/p1.yml@tag1
     secrets: inherit
