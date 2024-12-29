@@ -1,0 +1,14 @@
+# 2024-12-29
+
+name: Pipeline p1.yml
+
+on:
+  workflow_call:
+  # push:
+  # workflow_dispatch:  # we can also run it manually
+
+jobs:
+  j1:
+    runs-on: ubuntu-latest
+    uses: SV-ICA/rP/.github/workflows/p1.yml
+    secrets: inherit
